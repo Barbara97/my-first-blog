@@ -1,13 +1,10 @@
 {% extends 'blog/base.html' %}
 {% block content %}
-<a href="{% url "post_new"%}"> pridat prispevok </a>
-{% for post in posts %}
     <div class="post">
     <div class="date">
         <p> pridane {{ post.created_date }} </p>
     </div>
-    <h2> <a href="{% url "post_detail" post.pk %}">{{ post.title }}</a></h2>
+    <h2>{{ post.title }}</h2>
     <p> {{ post.text }} </p>
     </div>
-{% endfor %}
 {% endblock content %}  
